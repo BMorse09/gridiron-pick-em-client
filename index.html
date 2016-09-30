@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Example</title>
+
+      <script src="vendor.bundle.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="bundle.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body class="container-fluid">
+      <h1>GRIDIRON PICK 'EM</h1>
+
+      <nav class="navbar">
+            <button type="button" id="change-password-button" class="btn btn-default navbar-btn navbar-right">CHANGE PASSWORD</button>
+            <button type="button" id="sign-out-button" class="btn btn-default navbar-btn navbar-right">SIGN OUT</button>
+            <button type="button" id="sign-in-button" class="btn btn-default navbar-btn navbar-right">SIGN IN</button>
+            <button type="button" id="sign-up-button" class="btn btn-default navbar-btn navbar-right">SIGN UP</button>
+      </nav>
+
+      <div class="modal fade" id="sign-up-modal" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Sign Up!</h4>
+              </div>
+              <div class="modal-body">
+                <form id="sign-up">
+                  <fieldset>
+                    <legend>Sign up!</legend>
+                    <input type="text" name="credentials[email]" value="" placeholder="email">
+                    <input type="password" name="credentials[password]" value="" placeholder="password">
+                    <input type="password" name="credentials[password_confirmation]" value="" placeholder="password confirmation">
+                    <input type="submit" name="submit" value="Sign up!">
+                  </fieldset>
+                </form>
+              </div>
+            </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+
+
+        <div class="modal fade" id="sign-in-modal" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Sign In!</h4>
+              </div>
+              <div class="modal-body">
+                <form id="sign-in">
+                  <fieldset>
+                    <input type="text" name="credentials[email]" value="" placeholder="email">
+                    <input type="password" name="credentials[password]" value="" placeholder="password">
+                    <input type="submit" name="submit" value="Sign in!">
+                  </fieldset>
+                </form>
+              </div>
+            </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+
+
+        <div class="modal fade" id="change-password-modal" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Change Password</h4>
+              </div>
+              <div class="modal-body">
+                <form id="change-password">
+                  <fieldset>
+                    <legend>Change Password</legend>
+                    <input type="password" name="passwords[old]" value="" placeholder="Old Password">
+                    <input type="password" name="passwords[new]" value="" placeholder="New Password">
+                    <input type="submit" name="submit" value="Change Password">
+                  </fieldset>
+                </form>
+              </div>
+            </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->
+        </div>
+
+
+
+    </body>
+</html>
