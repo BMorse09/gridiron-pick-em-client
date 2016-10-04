@@ -105,8 +105,10 @@ webpackJsonp([0],[
 	  api.getMatchups(data).done(ui.getLeagueSuccess).fail(ui.failure);
 	};
 
-	var onSavePicks = function onSavePicks(data) {
+	var onSavePicks = function onSavePicks(event) {
 	  event.preventDefault();
+	  var data = getFormFields(event.target);
+	  console.log(data);
 	  api.getSavePicks(data).done(ui.savePicksSuccess).fail(ui.failure);
 	};
 
@@ -117,7 +119,8 @@ webpackJsonp([0],[
 	  $('#change-password').on('submit', onChangePassword);
 	  $('#getMatchupsButton').on('click', onGetMatchups);
 	  $('#getLeagueButton').on('click', onGetLeague);
-	  $("body").on('click', '#getSavePicksButton', onSavePicks);
+	  // $("body").on('click','#getSavePicksButton', onSavePicks);
+	  $("body").on('submit', '#savePicksId', onSavePicks);
 	};
 
 	module.exports = {
@@ -257,7 +260,8 @@ webpackJsonp([0],[
 	        user_id: app.user.id,
 	        matchup_id: 1,
 	        pick: 'away'
-	      }
+	      },
+	      data: data
 	    }
 	  });
 	};
@@ -362,6 +366,14 @@ webpackJsonp([0],[
 	},"3":function(container,depth0,helpers,partials,data) {
 	    var helper, alias1=depth0 != null ? depth0 : {}, alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
 
+	  return "    <div>\n        "
+	    + alias4(((helper = (helper = helpers.away || (depth0 != null ? depth0.away : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"away","hash":{},"data":data}) : helper)))
+	    + "\n        @\n        "
+	    + alias4(((helper = (helper = helpers.home || (depth0 != null ? depth0.home : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"home","hash":{},"data":data}) : helper)))
+	    + "\n        <form>\n            <br>\n              <input type=\"text\" name=\"[home/away]\">\n            <br>\n        </form>\n    </div>\n";
+	},"5":function(container,depth0,helpers,partials,data) {
+	    var helper, alias1=depth0 != null ? depth0 : {}, alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
+
 	  return "    <td><input type=\"checkbox\" value=\"away\">"
 	    + alias4(((helper = (helper = helpers.away || (depth0 != null ? depth0.away : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"away","hash":{},"data":data}) : helper)))
 	    + "</td>\n    <td>@</td>\n    <td>"
@@ -370,11 +382,15 @@ webpackJsonp([0],[
 	},"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
 	    var stack1, alias1=depth0 != null ? depth0 : {};
 
-	  return "<h2> Week 4 Matchups</h2>\n<h3> Make your Picks!</h3>\n\n\n<table>\n  <tr>\n"
+	  return "<h2> Week 4 Matchups</h2>\n<h3> Make your Picks!</h3>\n\n<!--\n<form>\n  <tr>\n"
 	    + ((stack1 = helpers.each.call(alias1,(depth0 != null ? depth0.matchups : depth0),{"name":"each","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
-	    + "</table>\n\n<button id=\"getSavePicksButton\">Save my Picks</button>\n\n<!-- <button onclick=\"updatePicks()\">Update Picks</button> -->\n\n<!-- <button onclick=\"load_()\">LOAD</button>  -->\n\n<!--\n<table>\n  <tr>\n"
+	    + "</form>\n\n<button id=\"getSavePicksButton\">Save my Picks</button> -->\n\n<form id=\"savePicksId\">\n  <fieldset>\n    <legend>Enter home/away</legend>\n\n"
 	    + ((stack1 = helpers.each.call(alias1,(depth0 != null ? depth0.matchups : depth0),{"name":"each","hash":{},"fn":container.program(3, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
-	    + "</table> -->\n";
+	    + "\n    <input id=\"getSavePicksButton\" type=\"submit\" name=\"submit\" value=\"Save my Picks\">\n\n  </fieldset>\n</form>\n\n<!-- <button onclick=\"updatePicks()\">Update Picks</button> -->\n\n<!-- <button onclick=\"load_()\">LOAD</button>  -->\n\n<!--\n<table>\n  <tr>\n"
+	    + ((stack1 = helpers.each.call(alias1,(depth0 != null ? depth0.matchups : depth0),{"name":"each","hash":{},"fn":container.program(5, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
+	    + "</table> -->\n\n<!-- <table>\n  <tr>\n"
+	    + ((stack1 = helpers.each.call(alias1,(depth0 != null ? depth0.matchups : depth0),{"name":"each","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
+	    + "</table>\n\n<button id=\"getSavePicksButton\">Save my Picks</button> -->\n";
 	},"useData":true});
 
 /***/ },
