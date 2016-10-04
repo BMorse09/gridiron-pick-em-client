@@ -1,20 +1,29 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>GRIDIRON PICK 'EM</title>
 
       <script src="vendor.bundle.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="bundle.js" type="text/javascript" charset="utf-8" defer></script>
+      <link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
+
     </head>
+
     <body class="container-fluid">
       <h1>GRIDIRON PICK 'EM</h1>
 
       <nav class="navbar">
-            <button type="button" id="change-password-button" class="btn btn-default navbar-btn navbar-right">CHANGE PASSWORD</button>
-            <button type="button" id="sign-out-button" class="btn btn-default navbar-btn navbar-right">SIGN OUT</button>
-            <button type="button" id="sign-in-button" class="btn btn-default navbar-btn navbar-right">SIGN IN</button>
-            <button type="button" id="sign-up-button" class="btn btn-default navbar-btn navbar-right">SIGN UP</button>
+            <button type="button" id="change-password-button" class="btn btn-default navbar-btn navbar-right">Change Password</button>
+            <button type="button" id="sign-out-button" class="btn btn-default navbar-btn navbar-right">Sign Out</button>
+            <button type="button" id="sign-in-button" class="btn btn-default navbar-btn navbar-right">Sign In</button>
+            <button type="button" id="sign-up-button" class="btn btn-default navbar-btn navbar-right">Sign Up</button>
       </nav>
+
+      <button id="getLeagueButton" class="btn btn-default">My League</button>
+      <div class="leaguecontent"></div>
+
+      <button id="getMatchupsButton" class="btn btn-default">My Picks</button>
+      <div class="content"></div>
 
       <div class="modal fade" id="sign-up-modal" tabindex="-1" role="dialog">
           <div class="modal-dialog" role="document">
@@ -80,8 +89,6 @@
             </div><!-- /.modal-content -->
           </div><!-- /.modal-dialog -->
         </div>
-
-
 
     </body>
 </html>

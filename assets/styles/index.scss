@@ -2,9 +2,35 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 
 $background-color: #333399;
-$font-color: #FFF;
+$font-color: #c0c0c0;
+
 
 body {
   background-color: $background-color;
   color: $font-color;
+  font-family: 'Russo One', sans-serif;
+}
+
+div {
+  font-size: 27px;
+  padding: 15px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 50px;
+  text-align: center;
+}
+
+#get-matchups-button {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+table {
+  border: 1px solid white;
+  margin: 15px;
+  padding: 20px;
+  text-align: center;
 }

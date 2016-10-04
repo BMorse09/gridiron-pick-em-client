@@ -39,9 +39,39 @@ const changePassword = (data) => {
   });
 };
 
+const getMatchups = () => {
+  return $.ajax({
+    url: app.host +'/matchups/',
+    method: "GET",
+    headers: {
+      Authorization: 'Token token=' + app.user.token,
+    },
+  });
+};
+
+const getSavePicks = (data) => {
+  return $.ajax({
+    url: app.host +'/predictions',
+    method: "POST",
+    headers: {
+      Authorization: 'Token token=' + app.user.token,
+    },
+    data: {
+      prediction: {
+        user_id: app.user.id,
+        matchup_id: 1,
+        pick: 'away',
+      },
+    },
+  });
+};
+
+
 module.exports = {
   signUp,
   signIn,
   signOut,
   changePassword,
+  getMatchups,
+  getSavePicks
 };

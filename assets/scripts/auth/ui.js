@@ -1,6 +1,8 @@
 'use strict';
 
 const app = require('../app.js');
+const showMatchupsTemplate = require('../templates/matchups-listing.handlebars');
+const showLeagueTemplate = require('../templates/league-listing.handlebars');
 
 const success = (data) => {
   if (data) {
@@ -16,17 +18,37 @@ const failure = (error) => {
 
 const signInSuccess = (data) => {
   app.user = data.user;
-  console.log(app.user);
+  $('#sign-in-modal').modal('hide');
+  // console.log(app.user);
 };
 
 const signOutSuccess = () => {
-  console.log('User signed out successfully');
   app.user = null;
+  $('#getMatchupsButton').modal('hide');
+  $('#getLeagueButton').modal('hide');
+};
+
+const savePicksSuccess = (data) => {
+  $('#getSavePicksButton');
+  app.user = data.user;
+};
+
+const getMatchupsSuccess = (matchups) => {
+  // console.log(data);
+  // let matchups = data;
+  $('.content').html(showMatchupsTemplate(matchups));
+};
+
+const getLeagueSuccess = (matchups) => {
+  $('.content').html(showLeagueTemplate(matchups));
 };
 
 module.exports = {
   success,
   failure,
   signInSuccess,
-  signOutSuccess
+  signOutSuccess,
+  getMatchupsSuccess,
+  getLeagueSuccess,
+  savePicksSuccess
 };
