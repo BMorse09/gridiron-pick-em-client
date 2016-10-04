@@ -62,6 +62,7 @@ const getSavePicks = (data) => {
         matchup_id: 1,
         pick: 'away',
       },
+      data: data
     },
   });
 };

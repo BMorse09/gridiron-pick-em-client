@@ -1,8 +1,8 @@
 <h2> Week 4 Matchups</h2>
 <h3> Make your Picks!</h3>
 
-
-<table>
+<!--
+<form>
   <tr>
 {{#each matchups}}
     <td><input type="checkbox" value="away">{{away}}</td>
@@ -10,9 +10,31 @@
     <td><input type="checkbox" value="home">{{home}}</td>
   </tr>
 {{/each}}
-</table>
+</form>
 
-<button id="getSavePicksButton">Save my Picks</button>
+<button id="getSavePicksButton">Save my Picks</button> -->
+
+<form id="savePicksId">
+  <fieldset>
+    <legend>Enter home/away</legend>
+
+    {{#each matchups}}
+    <div>
+        {{away}}
+        @
+        {{home}}
+        <form>
+            <br>
+              <input type="text" name="[home/away]">
+            <br>
+        </form>
+    </div>
+    {{/each}}
+
+    <input id="getSavePicksButton" type="submit" name="submit" value="Save my Picks">
+
+  </fieldset>
+</form>
 
 <!-- <button onclick="updatePicks()">Update Picks</button> -->
 
@@ -28,3 +50,15 @@
   </tr>
 {{/each}}
 </table> -->
+
+<!-- <table>
+  <tr>
+{{#each matchups}}
+    <td><input type="checkbox" value="away">{{away}}</td>
+    <td>@</td>
+    <td><input type="checkbox" value="home">{{home}}</td>
+  </tr>
+{{/each}}
+</table>
+
+<button id="getSavePicksButton">Save my Picks</button> -->
