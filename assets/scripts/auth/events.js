@@ -50,8 +50,10 @@ const onGetLeague = (data) => {
 
 };
 
-const onSavePicks = (data) => {
+const onSavePicks = (event) => {
     event.preventDefault();
+    let data = getFormFields(event.target);
+    console.log(data);
     api.getSavePicks(data)
       .done(ui.savePicksSuccess)
       .fail(ui.failure);
@@ -65,7 +67,8 @@ const addHandlers = () => {
   $('#change-password').on('submit', onChangePassword);
   $('#getMatchupsButton').on('click', onGetMatchups);
   $('#getLeagueButton').on('click', onGetLeague);
-  $("body").on('click','#getSavePicksButton',onSavePicks);
+  // $("body").on('click','#getSavePicksButton', onSavePicks);
+  $("body").on('submit','#savePicksId', onSavePicks);
 };
 
 module.exports = {
