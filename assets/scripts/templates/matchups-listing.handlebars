@@ -16,7 +16,8 @@
 
 <form id="savePicksId">
   <fieldset>
-    <legend>Enter home/away</legend>
+    <legend></legend>
+    <h4>Place your Winner by Entering home or away</h4>
 
     {{#each matchups}}
     <div>
@@ -25,13 +26,14 @@
         {{home}}
         <form>
             <br>
-              <input type="text" name="[home/away]">
+            <input type="text" name="pick" value="">
+            <input id="getSavePicksButton" type="submit" name="submit" value="Save my Pick">
             <br>
         </form>
     </div>
     {{/each}}
 
-    <input id="getSavePicksButton" type="submit" name="submit" value="Save my Picks">
+    <!-- <input id="getSavePicksButton" type="submit" name="submit" value="Save my Picks"> -->
 
   </fieldset>
 </form>

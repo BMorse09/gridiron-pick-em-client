@@ -60,9 +60,8 @@ const getSavePicks = (data) => {
       prediction: {
         user_id: app.user.id,
         matchup_id: 1,
-        pick: 'away',
+        pick: data.pick,
       },
-      data: data
     },
   });
 };
