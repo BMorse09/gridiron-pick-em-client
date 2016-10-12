@@ -28,20 +28,27 @@ const signOutSuccess = () => {
   $('#getLeagueButton').modal('hide');
 };
 
-const savePicksSuccess = (data) => {
-console.log(data);
-  $('#getSavePicksButton');
-};
-
 const getMatchupsSuccess = (matchups) => {
   // console.log(data);
   // let matchups = data;
   $('.content').html(showMatchupsTemplate(matchups));
 };
 
+
 const getLeagueSuccess = (matchups) => {
   $('.content').html(showLeagueTemplate(matchups));
 };
+
+
+const savePicksSuccess = (data) => {
+console.log(data);
+  $('#getSavePicksButton');
+};
+
+const getUpdatePicksSuccess = (matchups) => {
+  $('content').html(showMatchupsTemplate(matchups));
+};
+
 
 module.exports = {
   success,
@@ -50,5 +57,6 @@ module.exports = {
   signOutSuccess,
   getMatchupsSuccess,
   getLeagueSuccess,
-  savePicksSuccess
+  savePicksSuccess,
+  getUpdatePicksSuccess
 };

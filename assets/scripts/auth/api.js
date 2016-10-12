@@ -66,6 +66,8 @@ const getSavePicks = (data) => {
   });
 };
 
+const getUpdatePicks = 
+
 
 module.exports = {
   signUp,

@@ -63,6 +63,15 @@ const onSavePicks = (event) => {
       .fail(ui.failure);
 };
 
+const onUpdatePicks = (event) => {
+    event.preventDefault();
+    let data = getFormFields(event.target);
+    console.log(data);
+    api.getUpdatePicks(data)
+      .done(ui.updatePicksSuccess)
+      .fail(ui.failure);
+};
+
 
 const addHandlers = () => {
   $('#sign-up').on('submit', onSignUp);
@@ -74,6 +83,7 @@ const addHandlers = () => {
   // $('matchupId').on('click', onSavePicks);
   // $("body").on('click','#getSavePicksButton', onSavePicks);
   $("body").on('submit','.picks-form', onSavePicks);
+  $("body").on('submit','.picks-form', onUpdatePicks);
 };
 
 module.exports = {
