@@ -59,7 +59,7 @@ const getSavePicks = (data) => {
     data: {
       prediction: {
         user_id: app.user.id,
-        matchup_id: 1,
+        matchup_id: data.matchupId,
         pick: data.pick,
       },
     },
@@ -73,5 +73,5 @@ module.exports = {
   signOut,
   changePassword,
   getMatchups,
-  getSavePicks
+  getSavePicks,
 };

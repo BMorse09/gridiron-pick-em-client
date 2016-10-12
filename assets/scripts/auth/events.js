@@ -54,6 +54,10 @@ const onSavePicks = (event) => {
     event.preventDefault();
     let data = getFormFields(event.target);
     console.log(data);
+    let matchupId = $(event.target).data('id');
+    console.log(matchupId);
+    data.matchupId = matchupId;
+    console.log(data.matchupId);
     api.getSavePicks(data)
       .done(ui.savePicksSuccess)
       .fail(ui.failure);
@@ -67,8 +71,9 @@ const addHandlers = () => {
   $('#change-password').on('submit', onChangePassword);
   $('#getMatchupsButton').on('click', onGetMatchups);
   $('#getLeagueButton').on('click', onGetLeague);
+  // $('matchupId').on('click', onSavePicks);
   // $("body").on('click','#getSavePicksButton', onSavePicks);
-  $("body").on('submit','#savePicksId', onSavePicks);
+  $("body").on('submit','.picks-form', onSavePicks);
 };
 
 module.exports = {

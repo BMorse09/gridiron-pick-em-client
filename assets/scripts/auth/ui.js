@@ -31,7 +31,6 @@ const signOutSuccess = () => {
 const savePicksSuccess = (data) => {
 console.log(data);
   $('#getSavePicksButton');
-  app.user = data.user;
 };
 
 const getMatchupsSuccess = (matchups) => {

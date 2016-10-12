@@ -282,7 +282,7 @@ webpackJsonp([0],[
 	'use strict';
 
 	var app = {
-	  host: 'https://stark-ridge-13698.herokuapp.com'
+	  host: 'https://localhost3000'
 
 	};
 
@@ -366,11 +366,11 @@ webpackJsonp([0],[
 	},"3":function(container,depth0,helpers,partials,data) {
 	    var helper, alias1=depth0 != null ? depth0 : {}, alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
 
-	  return "    <div>\n        "
+	  return "<form=data.id>\n\nid=\"savePicksId\">\n  <fieldset>\n    <legend></legend>\n    <h4>Place your Winner by Entering home or away</h4>\n\n    <div>\n        "
 	    + alias4(((helper = (helper = helpers.away || (depth0 != null ? depth0.away : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"away","hash":{},"data":data}) : helper)))
 	    + "\n        @\n        "
 	    + alias4(((helper = (helper = helpers.home || (depth0 != null ? depth0.home : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"home","hash":{},"data":data}) : helper)))
-	    + "\n        <form>\n            <br>\n            <input type=\"text\" name=\"pick\" value=\"\">\n            <input id=\"getSavePicksButton\" type=\"submit\" name=\"submit\" value=\"Save my Pick\">\n            <br>\n        </form>\n    </div>\n";
+	    + "\n        <form>\n            <br>\n            <input type=\"text\" name=\"pick\" value=\"\">\n            <input id=\"getSavePicksButton\" type=\"submit\" name=\"submit\" value=\"Save my Pick\">\n            <br>\n        </form>\n    </div>\n\n\n    <!-- <input id=\"getSavePicksButton\" type=\"submit\" name=\"submit\" value=\"Save my Picks\"> -->\n\n  </fieldset>\n</form>\n\n";
 	},"5":function(container,depth0,helpers,partials,data) {
 	    var helper, alias1=depth0 != null ? depth0 : {}, alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
 
@@ -384,9 +384,9 @@ webpackJsonp([0],[
 
 	  return "<h2> Week 4 Matchups</h2>\n<h3> Make your Picks!</h3>\n\n<!--\n<form>\n  <tr>\n"
 	    + ((stack1 = helpers.each.call(alias1,(depth0 != null ? depth0.matchups : depth0),{"name":"each","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
-	    + "</form>\n\n<button id=\"getSavePicksButton\">Save my Picks</button> -->\n\n<form id=\"savePicksId\">\n  <fieldset>\n    <legend></legend>\n    <h4>Place your Winner by Entering home or away</h4>\n\n"
+	    + "</form>\n\n<button id=\"getSavePicksButton\">Save my Picks</button> -->\n"
 	    + ((stack1 = helpers.each.call(alias1,(depth0 != null ? depth0.matchups : depth0),{"name":"each","hash":{},"fn":container.program(3, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
-	    + "\n    <!-- <input id=\"getSavePicksButton\" type=\"submit\" name=\"submit\" value=\"Save my Picks\"> -->\n\n  </fieldset>\n</form>\n\n<!-- <button onclick=\"updatePicks()\">Update Picks</button> -->\n\n<!-- <button onclick=\"load_()\">LOAD</button>  -->\n\n<!--\n<table>\n  <tr>\n"
+	    + "<!-- <button onclick=\"updatePicks()\">Update Picks</button> -->\n\n<!-- <button onclick=\"load_()\">LOAD</button>  -->\n\n<!--\n<table>\n  <tr>\n"
 	    + ((stack1 = helpers.each.call(alias1,(depth0 != null ? depth0.matchups : depth0),{"name":"each","hash":{},"fn":container.program(5, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
 	    + "</table> -->\n\n<!-- <table>\n  <tr>\n"
 	    + ((stack1 = helpers.each.call(alias1,(depth0 != null ? depth0.matchups : depth0),{"name":"each","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")

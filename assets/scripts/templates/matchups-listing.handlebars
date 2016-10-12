@@ -13,31 +13,24 @@
 </form>
 
 <button id="getSavePicksButton">Save my Picks</button> -->
+<legend></legend>
+  <h4>Place your Winner by Entering home or away</h4>
 
-<form id="savePicksId">
-  <fieldset>
-    <legend></legend>
-    <h4>Place your Winner by Entering home or away</h4>
+{{#each matchups}}
 
-    {{#each matchups}}
     <div>
         {{away}}
         @
         {{home}}
-        <form>
+        <form class='picks-form' data-id={{id}}>
             <br>
             <input type="text" name="pick" value="">
             <input id="getSavePicksButton" type="submit" name="submit" value="Save my Pick">
             <br>
         </form>
     </div>
-    {{/each}}
 
-    <!-- <input id="getSavePicksButton" type="submit" name="submit" value="Save my Picks"> -->
-
-  </fieldset>
-</form>
-
+{{/each}}
 <!-- <button onclick="updatePicks()">Update Picks</button> -->
 
 <!-- <button onclick="load_()">LOAD</button>  -->
