@@ -4,6 +4,9 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 $background-color: #333399;
 $font-color: #c0c0c0;
 
+.hide {
+  display: none;
+}
 
 body {
   background-color: $background-color;

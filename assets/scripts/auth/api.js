@@ -49,6 +49,26 @@ const getMatchups = () => {
   });
 };
 
+const getMyPicks = () => {
+  return $.ajax({
+    url: app.host +'/predictions',
+    method: "GET",
+    headers: {
+      Authorization: 'Token token=' + app.user.token,
+    },
+  });
+};
+
+const getPrediction = (id) => {
+  return $.ajax({
+    url: app.host +'/predictions/' + id,
+    method: "GET",
+    headers: {
+      Authorization: 'Token token=' + app.user.token,
+    },
+  });
+};
+
 const getSavePicks = (data) => {
   return $.ajax({
     url: app.host +'/predictions',
@@ -66,7 +86,24 @@ const getSavePicks = (data) => {
   });
 };
 
-const getUpdatePicks = 
+const getUpdatePicks = (data, id) => {
+  console.log(data);
+  return $.ajax({
+    url: app.host +'/predictions/' + id,
+    method: "PATCH",
+    headers: {
+      Authorization: 'Token token=' + app.user.token,
+    },
+    data: data
+    // {
+    //   prediction: {
+    //     user_id: app.user.id,
+    //     matchup_id: app.matchup.id,
+    //     pick: data.pick,
+    //   },
+    // },
+  });
+};
 
 
 module.exports = {
@@ -76,4 +113,7 @@ module.exports = {
   changePassword,
   getMatchups,
   getSavePicks,
+  getUpdatePicks,
+  getMyPicks,
+  getPrediction
 };
