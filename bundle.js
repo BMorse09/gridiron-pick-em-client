@@ -287,7 +287,7 @@ webpackJsonp([0],[
 	'use strict';
 
 	var app = {
-	  host: 'http://localhost:3000'
+	  host: 'https://stark-ridge-13698.herokuapp.com'
 
 	};
 
