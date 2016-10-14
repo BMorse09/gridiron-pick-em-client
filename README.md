@@ -11,8 +11,11 @@ for measuring your skills against friends or managing your office work pool!
 USER STORIES:
 
 As a user, I want to make picks for each upcoming week in the NFL
+
 As a user, I want to be able to change my pick for a game before it begins
+
 As a user, I want to see the picks made by other members of my league
+
 As a user, I want to compare the results of my picks with other members from
 my league
 
