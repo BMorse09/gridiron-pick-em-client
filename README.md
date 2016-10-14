@@ -18,5 +18,7 @@ my league
 Wireframes:
 
 http://imgur.com/baTDWPg
+
 http://imgur.com/24DYKTr
+
 http://imgur.com/hptXvsd
