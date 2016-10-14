@@ -15,4 +15,8 @@ As a user, I want to see the picks made by other members of my league
 As a user, I want to compare the results of my picks with other members from
 my league
 
-#wireframe#
+Wireframes:
+
+http://imgur.com/baTDWPg
+http://imgur.com/24DYKTr
+http://imgur.com/hptXvsd
