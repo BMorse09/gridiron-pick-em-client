@@ -26,5 +26,4 @@ const modalEventHandlers = function (){
 $(() => {
   modalEventHandlers ();
   authEvents.addHandlers();
-
 });

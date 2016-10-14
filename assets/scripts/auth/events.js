@@ -42,12 +42,11 @@ const onGetMatchups = (data) => {
       .fail(ui.failure);
 };
 
-const onGetLeague = (data) => {
+const onGetMyPicks = () => {
     event.preventDefault();
-    api.getMatchups(data)
-      .done(ui.getLeagueSuccess)
+    api.getMyPicks()
+      .done(ui.getMyPicksSuccess)
       .fail(ui.failure);
-
 };
 
 const onSavePicks = (event) => {
@@ -63,6 +62,17 @@ const onSavePicks = (event) => {
       .fail(ui.failure);
 };
 
+// const onUpdatePicks = (event) => {
+//     event.preventDefault();
+//     let data = getFormFields(event.target);
+//     console.log(data);
+//     let matchupId = $(event.target).data('id');
+//     data.matchupId = matchupId;
+//     api.getUpdatePicks(data)
+//       .done(ui.updatePicksSuccess)
+//       .fail(ui.failure);
+// };
+
 
 const addHandlers = () => {
   $('#sign-up').on('submit', onSignUp);
@@ -70,10 +80,11 @@ const addHandlers = () => {
   $('#sign-out-button').on('click', onSignOut);
   $('#change-password').on('submit', onChangePassword);
   $('#getMatchupsButton').on('click', onGetMatchups);
-  $('#getLeagueButton').on('click', onGetLeague);
+  $('#getMyPicksButton').on('click', onGetMyPicks);
   // $('matchupId').on('click', onSavePicks);
   // $("body").on('click','#getSavePicksButton', onSavePicks);
   $("body").on('submit','.picks-form', onSavePicks);
+  // $("body").on('submit','.update-picks-form', onUpdatePicks);
 };
 
 module.exports = {

@@ -1,0 +1,16 @@
+<h1> Edit Pick </h1>
+
+    <div>
+        {{prediction.matchup.away}}
+        @
+        {{prediction.matchup.home}}
+        :
+        {{prediction.pick}}
+
+        <form class='update-pick-form' data-id={{id}}>
+            <br>
+            <input type="text" name="prediction[pick]" value="">
+            <input data-id={{prediction.id}} class="updatePickButton" type="submit" name="submit" value="Update my Pick">
+            <br>
+        </form>
+    </div>
